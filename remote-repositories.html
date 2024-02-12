@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Remote Repositories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Working with Remote Repositories</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="setting-up.html">Setting Up the Environment</a></li>
+        <li><a href="creating-cloning.html">Creating and Cloning a Repository</a></li>
+        <li><a href="basic-operations.html">Basic Git Operations</a></li>
+        <li><a href="branching.html">Branching with VS Code</a></li>
+        <li><a href="remote-repositories.html" class="active">Working with Remote Repositories</a></li>
+        <li><a href="pull-requests.html">Pull Requests and Code Reviews</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <h2>Adding a Remote Repository in VS Code</h2>
+    <p>To collaborate on projects or to share your code, you need to work with remote repositories. Here’s how you can add a remote repository:</p>
+    <ol>
+        <li>Open the Command Palette with <kbd>Ctrl+Shift+P</kbd> (Windows/Linux) or <kbd>Cmd+Shift+P</kbd> (Mac).</li>
+        <li>Type ‘Git: Add Remote’ and select it.</li>
+        <li>Enter the remote name (typically ‘origin’ if it’s your primary repository) and the repository URL.</li>
+        <li>Confirm your entry. The remote repository is now added to your project.</li>
+    </ol>
+    
+    <h2>Pushing Changes to a Remote Repository</h2>
+    <p>After committing your changes locally, you might want to share them with your team or update your code on GitHub. Here’s how:</p>
+    <ol>
+        <li>Save all your changes and commit them locally.</li>
+        <li>Open the Source Control side panel.</li>
+        <li>Click on the ‘...’ to open the menu and select ‘Push’ to push your commits to the remote repository.</li>
+        <li>If you have multiple remotes, select the remote you wish to push to.</li>
+    </ol>
+    
+    <h2>Pulling Updates from a Remote Repository</h2>
+    <p>It's essential to keep your local repository up-to-date with changes made by others. To pull the latest updates:</p>
+    <ol>
+        <li>Open the Source Control side panel.</li>
+        <li>Click on the ‘...’ to open the menu and select ‘Pull’ to fetch and merge the latest changes from the remote repository.</li>
+    </ol>
+    
+    <p>Working with remote repositories allows you to collaborate on projects more effectively, ensuring everyone has access to the latest version of the code.</p>
+</div>
+
+<footer>
+    <p>Created as part of my web development journey.</p>
+</footer>
+
+</body>
+</html>

@@ -1,114 +1,115 @@
+/* Define CSS Variables for Easy Theme Management */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6610f2;
+  --accent-color: #6f42c1;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --header-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #eaeff2;
-    color: #333;
-    line-height: 1.6;
-    font-size: 16px;
-  }
-  
- 
-  header {
-    background: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
-    color: #ffffff;
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  }
-  
- 
+/* Global Styles */
+body, html {
+  font-family: var(--font-family);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Stylish Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 2rem 0;
+  text-align: center;
+  font-family: var(--header-font-family);
+}
+
+/* Navigation Styles */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  background-color: var(--dark-color);
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: var(--light-color);
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: var(--accent-color);
+}
+
+/* Content Styles with Flexbox */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content > * {
+  max-width: 800px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.content {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
   nav ul {
-    list-style-type: none;
-    background-color: #023e8a;
-    text-align: center;
-    padding: 10px;
-    overflow: hidden;
+    flex-direction: column;
   }
-  
+
   nav ul li {
-    display: inline-block;
+    margin: 10px 0;
   }
-  
-  nav ul li a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  }
-  
-  nav ul li a:hover, nav ul li a.active {
-    background-color: #03045e;
-    color: #ade8f4;
-    border-radius: 5px;
-  }
-  
- 
+
   .content {
-    background-color: #fff;
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 960px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 10px;
+    padding: 10px;
   }
-  
-  .content h2, .content h3 {
-    color: #023e8a;
-  }
-  
-  .content p {
-    margin-bottom: 20px;
-  }
-  
-  .content ol, .content ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-  
-  
-  footer {
-    background: linear-gradient(135deg, #0096c7 0%, #0077b6 100%);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-  }
-  
- 
-  h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-  }
-  
- 
-  @media screen and (max-width: 768px) {
-    .content, nav ul li a {
-      padding: 20px;
-    }
-  
-    nav ul li {
-      display: block;
-    }
-  
-    .content {
-      width: auto;
-      margin: 20px;
-    }
-  }
-  
- 
-  html {
-    scroll-behavior: smooth;
-  }
-  
+}
+
   
